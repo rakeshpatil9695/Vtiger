@@ -45,6 +45,7 @@ public class MagicNumber
 	 	}
 	 	return true;
 	}
+	System.out.println("karan");
 	
 
 }
