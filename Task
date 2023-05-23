@@ -1,0 +1,38 @@
+public class MagicNumber 
+{
+
+	public static void main(String[] args) 
+	{
+		Scanner r=new Scanner(System.in);
+		System.out.println("Enter the number :");
+		int num=r.nextInt();
+		int ans=isHappy(num);
+		if(ans==1)
+		{
+			System.out.println("It is magic number ");
+		}
+		else
+		{
+			System.out.println("It is not magic number");
+		}
+
+	}
+	public static int isHappy(int num)
+	{
+		int sum=0;
+		while(num>9)
+		{
+			while(num>0)
+			{
+				int rem=num%10;
+				sum+=rem;
+				num/=10;
+			}
+			
+			num=sum;
+			sum=0;
+		}
+		return num;
+	}
+
+}
